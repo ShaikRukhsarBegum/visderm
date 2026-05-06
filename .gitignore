@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.installed.cfg
+*.egg
+build/
+dist/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Data and checkpoints (should be downloaded separately)
+data/HAM10000/
+data/DDI/
+data/ISIC2019/
+*.pth
+*.pt
+*.bin
+results/
+runs/
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Outputs
+figures/
+*.png
+*.pdf
+!docs/*.png
+!docs/*.pdf

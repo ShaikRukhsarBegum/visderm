@@ -1,0 +1,27 @@
+# VisDerm reproduction requirements
+# Tested on Python 3.10, CUDA 12.1, NVIDIA A100
+
+# Core deep learning
+torch==2.1.2
+torchvision==0.16.2
+timm==0.9.12
+
+# Numerical / data
+numpy==1.26.3
+pandas==2.1.4
+scikit-learn==1.4.0
+scipy==1.11.4
+
+# Image / I/O
+Pillow==10.2.0
+
+# Progress / logging
+tqdm==4.66.1
+
+# Plotting (for figures)
+matplotlib==3.8.2
+
+# Differential privacy reference (analytic Gaussian mechanism)
+# We implement the analytic Gaussian mechanism in src/privacy.py;
+# opacus is listed for users who want to compare against DP-SGD.
+opacus==1.4.0
