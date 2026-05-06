@@ -5,7 +5,7 @@ This script:
   1. Loads HAM10000 metadata from ``data/HAM10000/HAM10000_metadata.csv``
   2. Applies the canonical patient-grouped 70/15/15 split
      (GroupShuffleSplit on lesion_id, random_state=42)
-  3. Loads the released checkpoint ``model1.pth`` (or downloads it from Zenodo
+  3. Loads the released checkpoint ``model1.pth`` (or downloads it from GitHub Releases
      if not present locally)
   4. Evaluates on the test split (n=1527) and prints accuracy, melanoma recall
 
@@ -36,8 +36,8 @@ from src.train import evaluate
 # Canonical checkpoint hash (from the original training run)
 CHECKPOINT_SHA256 = "c32d8680d8a56524e1e99f2929cc2c56f05a8aa0169ed00484059ff511a6e09e"
 
-# Zenodo URL template — to be filled in once the checkpoint is uploaded
-ZENODO_DOI = "10.5281/zenodo.PLACEHOLDER"
+# GitHub Release URL for the canonical checkpoint
+CHECKPOINT_URL = "https://github.com/ShaikRukhsarBegum/visderm/releases/download/v1.0-ijai/model1.pth"
 
 
 def file_sha256(path: Path) -> str:
@@ -113,7 +113,7 @@ def main():
     if not checkpoint_path.exists():
         raise FileNotFoundError(
             f"Checkpoint not found at {checkpoint_path}.\n"
-            f"Download from Zenodo DOI {ZENODO_DOI} and place at the project root."
+            f"Download from {CHECKPOINT_URL} and place at the project root."
         )
 
     if not args.skip_hash_check:

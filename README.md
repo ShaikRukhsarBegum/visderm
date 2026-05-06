@@ -27,6 +27,10 @@ The single-file script `reproduce.py` downloads HAM10000, applies the canonical 
 git clone https://github.com/ShaikRukhsarBegum/visderm.git
 cd visderm
 pip install -r requirements.txt
+
+# Download the trained checkpoint (~21 MB) from the GitHub Release
+wget https://github.com/ShaikRukhsarBegum/visderm/releases/download/v1.0-ijai/model1.pth
+
 python reproduce.py
 ```
 
@@ -41,7 +45,7 @@ Evaluating on n=1527 test images ...
   Per-inference payload: 148 KB (148 KB without STP-DP, 38 KB with)
 ```
 
-The checkpoint `model1.pth` is hosted on Zenodo with permanent DOI: **[DOI to be inserted on acceptance]**.
+The checkpoint `model1.pth` is attached to [GitHub Release v1.0-ijai](https://github.com/ShaikRukhsarBegum/visderm/releases/tag/v1.0-ijai) (~21 MB).
 
 ## Repository Structure
 
